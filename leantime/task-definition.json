@@ -72,15 +72,15 @@
       ],
 
       "secrets": [
-        { "name": "DB_HOST", "valueFrom": "/lks/db/host" },
-        { "name": "DB_PORT", "valueFrom": "/lks/db/port" },
-        { "name": "DB_NAME", "valueFrom": "/lks/db/name" },
-        { "name": "DB_USER", "valueFrom": "/lks/db/username" },
-        { "name": "DB_PASS", "valueFrom": "/lks/db/password" }
+        { "name": "LEANTIME_DB_HOST", "valueFrom": "/lks/db/host" },
+        { "name": "LEANTIME_DB_PORT", "valueFrom": "/lks/db/port" },
+        { "name": "LEANTIME_DB_NAME", "valueFrom": "/lks/db/name" },
+        { "name": "LEANTIME_DB_USER", "valueFrom": "/lks/db/username" },
+        { "name": "LEANTIME_DB_PASS", "valueFrom": "/lks/db/password" }
       ],
 
       "environment": [
-        { "name": "BASE_URL", "value": "http://lksoss-lb-1903512492.us-east-1.elb.amazonaws.com" },
+        { "name": "LEANTIME_URL", "value": "http://lksoss-lb-1903512492.us-east-1.elb.amazonaws.com" },
         { "name": "APP_PORT", "value": "8080" },
         { "name": "SITENAME", "value": "LKS Leantime" },
         { "name": "DEFAULT_TIMEZONE", "value": "Asia/Jakarta" }
