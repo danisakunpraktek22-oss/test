@@ -13,7 +13,7 @@
       "efsVolumeConfiguration": {
         "authorizationConfig": {
           "accessPointId": "fsap-038290b1cf5a7b44d",
-          "iam": "ENABLED"
+          "iam": "DISABLED"
         },
         "fileSystemId": "fs-0b07c90068b47a7e2",
         "rootDirectory": "/",
@@ -25,7 +25,7 @@
       "efsVolumeConfiguration": {
         "authorizationConfig": {
           "accessPointId": "fsap-0a1ff6ee14cecd9bc",
-          "iam": "ENABLED"
+          "iam": "DISABLED"
         },
         "fileSystemId": "fs-0b07c90068b47a7e2",
         "rootDirectory": "/",
@@ -37,13 +37,13 @@
       "efsVolumeConfiguration": {
         "authorizationConfig": {
           "accessPointId": "fsap-05d89133e2a928353",
-          "iam": "ENABLED"
+          "iam": "DISABLED"
         },
         "fileSystemId": "fs-0b07c90068b47a7e2",
         "rootDirectory": "/",
         "transitEncryption": "ENABLED"
       },
-      "name": "plugins"
+      "name": "plug"
     }
   ],
 
@@ -72,20 +72,18 @@
       ],
 
       "secrets": [
-        { "name": "LEANTIME_DB_HOST", "valueFrom": "/lks/db/host" },
-        { "name": "LEANTIME_DB_PORT", "valueFrom": "/lks/db/port" },
-        { "name": "LEANTIME_DB_NAME", "valueFrom": "/lks/db/name" },
-        { "name": "LEANTIME_DB_USER", "valueFrom": "/lks/db/username" },
-        { "name": "LEANTIME_DB_PASS", "valueFrom": "/lks/db/password" }
+        { "name": "DB_HOST", "valueFrom": "/lks/db/host" },
+        { "name": "DB_PORT", "valueFrom": "/lks/db/port" },
+        { "name": "DB_NAME", "valueFrom": "/lks/db/name" },
+        { "name": "DB_USERNAME", "valueFrom": "/lks/db/username" },
+        { "name": "DB_PASSWORD", "valueFrom": "/lks/db/password" }
       ],
 
       "environment": [
-        { "name": "LEANTIME_URL", "value": "http://lks-project-management-cluster.cluster-c7i8uumoqg9s.us-east-1.rds.amazonaws.com" },
+        { "name": "APP_URL", "value": "http://lksoss-lb-1903512492.us-east-1.elb.amazonaws.com" },
         { "name": "APP_PORT", "value": "8080" },
         { "name": "SITENAME", "value": "LKS Leantime" },
-        { "name": "DEFAULT_TIMEZONE", "value": "Asia/Jakarta" },
-        { "name": "PUID", "value": "1000" },
-        { "name": "PGID", "value": "1000" }
+        { "name": "DEFAULT_TIMEZONE", "value": "Asia/Jakarta" }
       ],
 
       "mountPoints": [
@@ -95,14 +93,14 @@
           "sourceVolume": "public"
         },
         {
-          "containerPath": "/var/www/html/userfiles",
+          "containerPath": "/var/www/html/userfiles ",
           "readOnly": false,
           "sourceVolume": "user"
         },
         {
-          "containerPath": "/var/www/html/app/plugins",
+          "containerPath": "/var/www/html/app/Plugins ",
           "readOnly": false,
-          "sourceVolume": "plugins"
+          "sourceVolume": "plug"
         }
       ],
 
