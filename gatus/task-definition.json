@@ -1,8 +1,8 @@
 {
   
   "family": "Iks-gatus-app",
-  "taskRoleArn": "arn:aws:iam::471112773328:role/LabRole",
-  "executionRoleArn": "arn:aws:iam::471112773328:role/LabRole",
+  "taskRoleArn": "arn:aws:iam::471112773328:Role/LabRole",
+  "executionRoleArn": "arn:aws:iam::471112773328:Role/LabRole",
   "networkMode": "awsvpc",
   "volumes": [],
   "placementConstraints": [],
