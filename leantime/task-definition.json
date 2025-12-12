@@ -73,6 +73,7 @@
 
       "secrets": [
         { "name": "LEANTIME_DB_HOST", "valueFrom": "/lks/db/host" },
+        { "name": "LEANTIME_DB_PORT", "valueFrom": "/lks/db/port" },
         { "name": "LEANTIME_DB_NAME", "valueFrom": "/lks/db/name" },
         { "name": "LEANTIME_DB_USER", "valueFrom": "/lks/db/username" },
         { "name": "LEANTIME_DB_PASS", "valueFrom": "/lks/db/password" }
@@ -82,10 +83,28 @@
         { "name": "LEANTIME_URL", "value": "http://lksoss-lb-1903512492.us-east-1.elb.amazonaws.com" },
         { "name": "APP_PORT", "value": "8080" },
         { "name": "SITENAME", "value": "LKS Leantime" },
-        { "name": "DEFAULT_TIMEZONE", "value": "Asia/Jakarta" }
+        { "name": "DEFAULT_TIMEZONE", "value": "Asia/Jakarta" },
+        { "name": "PUID", "value": "1000" },
+        { "name": "PGID", "value": "1000" }
       ],
 
-
+      "mountPoints": [
+        {
+          "containerPath": "/var/www/html/public/userfiles",
+          "readOnly": false,
+          "sourceVolume": "public"
+        },
+        {
+          "containerPath": "/var/www/html/userfiles ",
+          "readOnly": false,
+          "sourceVolume": "user"
+        },
+        {
+          "containerPath": "/var/www/html/app/plugins ",
+          "readOnly": false,
+          "sourceVolume": "plugins"
+        }
+      ],
 
       "logConfiguration": {
         "logDriver": "awslogs",
