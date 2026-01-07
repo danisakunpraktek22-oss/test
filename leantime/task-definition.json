@@ -1,7 +1,7 @@
 {
   "family": "lks-leantime-app",
-  "taskRoleArn": "arn:aws:iam::471112773328:role/LabRole",
-  "executionRoleArn": "arn:aws:iam::471112773328:role/LabRole",
+  "taskRoleArn": "arn:aws:iam::211125520056:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::211125520056:role/LabRole",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
     "FARGATE"
@@ -12,10 +12,10 @@
     {
       "efsVolumeConfiguration": {
         "authorizationConfig": {
-          "accessPointId": "fsap-08e106dd5875dbfbd",
+          "accessPointId": "fsap-063c4052ce7e305d4",
           "iam": "DISABLED"
         },
-        "fileSystemId": "fs-0868df7859070337e",
+        "fileSystemId": "fs-0d04dd3de0bbc43fb",
         "rootDirectory": "/",
         "transitEncryption": "ENABLED"
       },
@@ -24,10 +24,10 @@
     {
       "efsVolumeConfiguration": {
         "authorizationConfig": {
-          "accessPointId": "fsap-015b9d3f5d1cc9eb5",
+          "accessPointId": "fsap-0e82e38cee75ad7fd",
           "iam": "DISABLED"
         },
-        "fileSystemId": "fs-0868df7859070337e",
+        "fileSystemId": "fs-0d04dd3de0bbc43fb",
         "rootDirectory": "/",
         "transitEncryption": "ENABLED"
       },
@@ -36,10 +36,10 @@
     {
       "efsVolumeConfiguration": {
         "authorizationConfig": {
-          "accessPointId": "fsap-0e7da5a8f2844e32e",
+          "accessPointId": "fsap-0ab20cab5ca3c2f66",
           "iam": "DISABLED"
         },
-        "fileSystemId": "fs-0868df7859070337e",
+        "fileSystemId": "fs-0d04dd3de0bbc43fb",
         "rootDirectory": "/",
         "transitEncryption": "ENABLED"
       },
