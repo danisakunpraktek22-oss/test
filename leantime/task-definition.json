@@ -1,7 +1,7 @@
 {
   "family": "lks-leantime-app",
-  "taskRoleArn": "arn:aws:iam::891377093193:role/LabRole",
-  "executionRoleArn": "arn:aws:iam::891377093193:role/LabRole",
+  "taskRoleArn": "arn:aws:iam::058264312860:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::058264312860:role/LabRole",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
     "FARGATE"
@@ -12,10 +12,10 @@
     {
       "efsVolumeConfiguration": {
         "authorizationConfig": {
-          "accessPointId": "fsap-06bcdb74990db7f7c",
+          "accessPointId": "fsap-0f312b7f301adb74d",
           "iam": "DISABLED"
         },
-        "fileSystemId": "fs-0ed566ba766f62b4b",
+        "fileSystemId": "fs-09e8e60f690fd7db9",
         "rootDirectory": "/",
         "transitEncryption": "ENABLED"
       },
@@ -24,10 +24,10 @@
     {
       "efsVolumeConfiguration": {
         "authorizationConfig": {
-          "accessPointId": "fsap-01f307143bf1f5997",
+          "accessPointId": "fsap-01cd062bfe68e1503",
           "iam": "DISABLED"
         },
-        "fileSystemId": "fs-0ed566ba766f62b4b",
+        "fileSystemId": "fs-09e8e60f690fd7db9",
         "rootDirectory": "/",
         "transitEncryption": "ENABLED"
       },
@@ -36,10 +36,10 @@
     {
       "efsVolumeConfiguration": {
         "authorizationConfig": {
-          "accessPointId": "fsap-08292f653cab67ca8",
+          "accessPointId": "fsap-01e172b1ee3fa0f69",
           "iam": "DISABLED"
         },
-        "fileSystemId": "fs-0ed566ba766f62b4b",
+        "fileSystemId": "fs-09e8e60f690fd7db9",
         "rootDirectory": "/",
         "transitEncryption": "ENABLED"
       },
@@ -80,7 +80,7 @@
       ],
 
       "environment": [
-        { "name": "APP_URL", "value": "http://lks-oss-lb-741595328.us-east-1.elb.amazonaws.com" },
+        { "name": "APP_URL", "value": "http://lks-oss-lb-7436389.us-east-1.elb.amazonaws.com" },
         { "name": "APP_PORT", "value": "8080" },
         { "name": "SITENAME", "value": "Leantime" },
         { "name": "DEFAULT_TIMEZONE", "value": "Asia/Jakarta" }
